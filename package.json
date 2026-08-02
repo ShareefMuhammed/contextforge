@@ -1,0 +1,35 @@
+{
+  "name": "contextforge",
+  "version": "0.1.0",
+  "description": "Generate a shared AI knowledge base for your project — one source of truth, every tool covered.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "contextforge": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc && node -e \"try { require('fs').chmodSync('dist/index.js', 0o755) } catch(e) {}\"",
+    "dev": "tsx src/index.ts",
+    "prepack": "npm run build"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@clack/prompts": "^1.7.0",
+    "cac": "^6.7.14",
+    "fs-extra": "^11.3.0",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.13.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
