@@ -3,6 +3,18 @@
   "version": "0.1.0",
   "description": "Generate a shared AI knowledge base for your project — one source of truth, every tool covered.",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ShareefMuhammed/contextforge.git"
+  },
+  "keywords": [
+    "cli",
+    "ai",
+    "claude",
+    "cursor",
+    "context",
+    "developer-tools"
+  ],
   "type": "module",
   "bin": {
     "contextforge": "./dist/index.js"
