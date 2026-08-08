@@ -26,11 +26,10 @@ jobs:
       - name: Build package
         run: npm run build
 
-      - name: Create npm package tarball
-        run: npm pack
-
       - name: Install contextforge globally from tarball
-        run: npm install -g ./contextforge-*.tgz
+        run: |
+          TARBALL=$(npm pack --silent)
+          npm install -g "./$TARBALL"
 
       - name: Run CLI smoke test and doctor verification
         run: |
