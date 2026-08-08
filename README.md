@@ -5,9 +5,9 @@ Generate a shared AI knowledge base for your project — one source of truth, ev
 ## Install
 
 ```sh
-npm install -g contextforge
+npm install -g @shareefmuhammed/contextforge
 # or
-npx contextforge <command>
+npx @shareefmuhammed/contextforge <command>
 ```
 
 ## Usage
