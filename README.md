@@ -17,13 +17,18 @@ npx contextforge <command>
 | `init` | Run wizard, generate context for the current directory |
 | `init --yes` | Skip wizard, use safe defaults |
 | `init --dry-run` | Preview files that would be created / modified |
-| `boot <name>` | Like `init` but labels the context with a project name |
+| `boot <name>` (or `--boot`) | Bootstrap a new project context in `<name>` folder |
+| `boot <name> --yes` | Skip wizard and use safe defaults |
 | `doctor` | Verify all generated files exist and are valid |
 | `add <component>` | Add a single skill or agent (e.g. `add backend-engineer`) |
 
 ### Examples
 
 ```sh
+# Bootstrap a new project context (subcommand or flag syntax)
+npx contextforge boot my-project -y
+npx contextforge --boot my-project -y
+
 # Create context in current directory (interactive)
 npx contextforge init
 
