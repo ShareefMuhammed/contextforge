@@ -47,18 +47,5 @@ jobs:
       - name: Ensure latest npm CLI
         run: npm install -g npm@latest
 
-      - name: Diagnostic - npm version and OIDC environment
-        run: |
-          echo "npm version:"
-          npm --version
-          echo "node version:"
-          node --version
-          echo "Checking for OIDC environment variables (names only, not values):"
-          env | grep -i "ACTIONS_ID_TOKEN" | sed 's/=.*/=<present>/' || echo "NO ACTIONS_ID_TOKEN variables found"
-          echo "npm config registry:"
-          npm config get registry
-          echo "Checking .npmrc content (if any):"
-          cat .npmrc 2>/dev/null || echo "No .npmrc file found"
-
       - name: Publish to npm
         run: npm publish --access=public
